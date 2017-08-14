@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7iY-Zc-UOi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Aequilibrium Tech Assignments-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AequilibriumTechAssignments" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pnS-9b-dBt">
-                                <rect key="frame" x="65" y="165" width="245" height="336"/>
+                                <rect key="frame" x="65" y="165.5" width="245" height="336"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gf3-zY-B4Z">
                                         <rect key="frame" x="0.0" y="0.0" width="245" height="168"/>
@@ -31,6 +32,9 @@
                                             <string key="title">Part 1: 
 The Castle Company</string>
                                         </state>
+                                        <connections>
+                                            <segue destination="fOa-c2-MG7" kind="show" id="kza-ZT-xoY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="93R-i3-sHw">
                                         <rect key="frame" x="0.0" y="168" width="245" height="168"/>
@@ -39,6 +43,9 @@ The Castle Company</string>
                                             <string key="title">Part 2: 
 The Transformation Company</string>
                                         </state>
+                                        <connections>
+                                            <segue destination="F0V-Kr-0BK" kind="show" id="TON-GY-qfq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -46,25 +53,107 @@ The Transformation Company</string>
                                     <constraint firstAttribute="height" constant="336" id="xLT-co-Qf0"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkB-Ep-jqQ">
-                                <rect key="frame" x="67.5" y="44" width="239.5" height="41"/>
-                                <string key="text">Fernando Jinzenji
-Aequilibrium Tech Assignments</string>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pnS-9b-dBt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LIk-w3-eXB"/>
+                            <constraint firstItem="pnS-9b-dBt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c5I-jt-nn6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Aequilibrium Tech Assignments" id="hDc-dQ-dUN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NCO-AR-QOy">
+            <objects>
+                <viewController id="F0V-Kr-0BK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qi5-Cs-dMB"/>
+                        <viewControllerLayoutGuide type="bottom" id="SQo-Ec-iA4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UDQ-RE-mfC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCj-qk-Nuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983.2" y="478.11094452773619"/>
+        </scene>
+        <!--The Castle Company-->
+        <scene sceneID="h4e-lk-mnl">
+            <objects>
+                <viewController id="fOa-c2-MG7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U8i-u9-amd"/>
+                        <viewControllerLayoutGuide type="bottom" id="tfE-gT-N9N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Sa-dh-QYC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type an array of integers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwr-aX-YWX">
+                                <rect key="frame" x="16" y="214" width="195" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fya-0h-gwA">
+                                <rect key="frame" x="16" y="247" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iE-Ea-awm">
+                                <rect key="frame" x="117" y="289" width="140" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Castles to Build"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aequilibrium can build 0 castles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsE-Nv-56A">
+                                <rect key="frame" x="66" y="357" width="242" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fkB-Ep-jqQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8KE-3q-E89"/>
-                            <constraint firstItem="pnS-9b-dBt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LIk-w3-eXB"/>
-                            <constraint firstItem="pnS-9b-dBt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c5I-jt-nn6"/>
-                            <constraint firstItem="fkB-Ep-jqQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="zdn-2Q-rMZ"/>
+                            <constraint firstItem="fya-0h-gwA" firstAttribute="trailing" secondItem="5Sa-dh-QYC" secondAttribute="trailingMargin" id="3fQ-r2-Foq"/>
+                            <constraint firstItem="fya-0h-gwA" firstAttribute="leading" secondItem="5Sa-dh-QYC" secondAttribute="leadingMargin" id="4i9-Kf-o43"/>
+                            <constraint firstItem="IsE-Nv-56A" firstAttribute="top" secondItem="6iE-Ea-awm" secondAttribute="bottom" constant="32" id="F8y-G3-J2c"/>
+                            <constraint firstItem="6iE-Ea-awm" firstAttribute="centerX" secondItem="5Sa-dh-QYC" secondAttribute="centerX" id="Mmf-tg-trh"/>
+                            <constraint firstItem="Mwr-aX-YWX" firstAttribute="leading" secondItem="5Sa-dh-QYC" secondAttribute="leadingMargin" id="MoZ-h6-ET8"/>
+                            <constraint firstItem="fya-0h-gwA" firstAttribute="top" secondItem="Mwr-aX-YWX" secondAttribute="bottom" constant="12" id="Std-Sr-AVt"/>
+                            <constraint firstItem="6iE-Ea-awm" firstAttribute="top" secondItem="fya-0h-gwA" secondAttribute="bottom" constant="12" id="mUw-iN-xEq"/>
+                            <constraint firstItem="Mwr-aX-YWX" firstAttribute="top" secondItem="U8i-u9-amd" secondAttribute="bottom" constant="150" id="niA-16-ANn"/>
+                            <constraint firstItem="IsE-Nv-56A" firstAttribute="centerX" secondItem="5Sa-dh-QYC" secondAttribute="centerX" id="tUW-lD-MFu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="The Castle Company" id="pkL-Wj-Ftr"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxt-ao-RbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983.2" y="-242.42878560719643"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zjs-a8-FJr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7iY-Zc-UOi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X7h-ny-S29">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YZx-1a-ktj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnm-9U-vbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
