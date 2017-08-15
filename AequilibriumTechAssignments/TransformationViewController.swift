@@ -129,10 +129,12 @@ class TransformationViewController: UIViewController, UITableViewDataSource, UIT
         
         if transformer.type == .Autobot {
             self.autobotsList.append(transformer)
+            self.selectedAutobots.removeAll()
             self.abTableView.reloadData()
         }
         else {
             self.decepticonsList.append(transformer)
+            self.selectedDecepticons.removeAll()
             self.dcTableView.reloadData()
         }
         

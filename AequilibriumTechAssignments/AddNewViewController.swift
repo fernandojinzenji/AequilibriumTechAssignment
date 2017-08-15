@@ -53,6 +53,12 @@ class AddNewViewController: UIViewController {
         
     }
 
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+        
+        self.dismiss(animated: false, completion: nil)
+        
+    }
+    
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
         if(nameTextField.text == nil || nameTextField.text!.isEmpty) {

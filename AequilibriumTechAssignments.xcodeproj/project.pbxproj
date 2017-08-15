@@ -19,6 +19,7 @@
 		9C60AF3B1F42A9F800FB6FB8 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C60AF3A1F42A9F800FB6FB8 /* Battle.swift */; };
 		9C60AF3D1F42C2C400FB6FB8 /* TransformerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C60AF3C1F42C2C400FB6FB8 /* TransformerTableViewCell.swift */; };
 		9C60AF3F1F42C88E00FB6FB8 /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C60AF3E1F42C88E00FB6FB8 /* AddNewViewController.swift */; };
+		9C60AF411F42DCF600FB6FB8 /* BattleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C60AF401F42DCF600FB6FB8 /* BattleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9C60AF3A1F42A9F800FB6FB8 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
 		9C60AF3C1F42C2C400FB6FB8 /* TransformerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformerTableViewCell.swift; sourceTree = "<group>"; };
 		9C60AF3E1F42C88E00FB6FB8 /* AddNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
+		9C60AF401F42DCF600FB6FB8 /* BattleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				9C60AF341F425AF300FB6FB8 /* ViewControllers */,
 				9C60AF371F4284FC00FB6FB8 /* Models */,
+				9C60AF421F42DCFB00FB6FB8 /* Views */,
 				9C60AF1E1F4254DD00FB6FB8 /* AppDelegate.swift */,
 				9C60AF221F4254DD00FB6FB8 /* Main.storyboard */,
 				9C60AF251F4254DD00FB6FB8 /* Assets.xcassets */,
@@ -87,7 +90,6 @@
 				9C60AF321F425AE900FB6FB8 /* TransformationViewController.swift */,
 				9C60AF381F42851400FB6FB8 /* BattleViewController.swift */,
 				9C60AF3E1F42C88E00FB6FB8 /* AddNewViewController.swift */,
-				9C60AF3C1F42C2C400FB6FB8 /* TransformerTableViewCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -99,6 +101,15 @@
 				9C60AF3A1F42A9F800FB6FB8 /* Battle.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		9C60AF421F42DCFB00FB6FB8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C60AF3C1F42C2C400FB6FB8 /* TransformerTableViewCell.swift */,
+				9C60AF401F42DCF600FB6FB8 /* BattleTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				9C60AF391F42851400FB6FB8 /* BattleViewController.swift in Sources */,
 				9C60AF3F1F42C88E00FB6FB8 /* AddNewViewController.swift in Sources */,
 				9C60AF3B1F42A9F800FB6FB8 /* Battle.swift in Sources */,
+				9C60AF411F42DCF600FB6FB8 /* BattleTableViewCell.swift in Sources */,
 				9C60AF311F425AE100FB6FB8 /* CastleViewController.swift in Sources */,
 				9C60AF211F4254DD00FB6FB8 /* ViewController.swift in Sources */,
 				9C60AF1F1F4254DD00FB6FB8 /* AppDelegate.swift in Sources */,
