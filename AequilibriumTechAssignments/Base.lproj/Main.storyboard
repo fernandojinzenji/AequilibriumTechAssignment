@@ -189,20 +189,14 @@ The Transformation Company</string>
                                                     <outlet property="delegate" destination="F0V-Kr-0BK" id="YYC-JN-d8J"/>
                                                 </connections>
                                             </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRX-i6-y0R">
-                                                <rect key="frame" x="257" y="3" width="78" height="30"/>
-                                                <state key="normal" title="Create new"/>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="3CW-rd-N3d" secondAttribute="bottom" constant="8" id="1UY-m9-N3D"/>
-                                            <constraint firstAttribute="trailing" secondItem="kRX-i6-y0R" secondAttribute="trailing" constant="8" id="5PH-FA-GNy"/>
                                             <constraint firstItem="3CW-rd-N3d" firstAttribute="top" secondItem="vp2-0s-Np9" secondAttribute="bottom" constant="8" id="9sz-18-1RR"/>
                                             <constraint firstItem="vp2-0s-Np9" firstAttribute="leading" secondItem="QZv-By-qfD" secondAttribute="leading" constant="8" id="BHe-i1-vCq"/>
                                             <constraint firstItem="3CW-rd-N3d" firstAttribute="leading" secondItem="QZv-By-qfD" secondAttribute="leading" constant="8" id="SVP-Ec-2pB"/>
                                             <constraint firstAttribute="trailing" secondItem="3CW-rd-N3d" secondAttribute="trailing" constant="8" id="Szq-bx-MEG"/>
-                                            <constraint firstItem="kRX-i6-y0R" firstAttribute="centerY" secondItem="vp2-0s-Np9" secondAttribute="centerY" id="Yxn-OO-sDu"/>
                                             <constraint firstItem="vp2-0s-Np9" firstAttribute="top" secondItem="QZv-By-qfD" secondAttribute="top" constant="8" id="tkU-0F-pTN"/>
                                         </constraints>
                                     </view>
@@ -580,7 +574,7 @@ The Transformation Company</string>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aRw-G0-LgP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="battle-cell" rowHeight="75" id="A6G-91-Ces" customClass="BattleTableViewCell" customModule="AequilibriumTechAssignments" customModuleProvider="target">
@@ -602,7 +596,7 @@ The Transformation Company</string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkS-I4-q1R">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🆚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkS-I4-q1R">
                                                     <rect key="frame" x="176" y="23" width="23" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -672,20 +666,59 @@ The Transformation Company</string>
                                     <outlet property="delegate" destination="45d-76-6X9" id="8Rm-bg-7Vd"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gD3-Pq-BUP">
+                                <rect key="frame" x="134" y="629" width="106" height="30"/>
+                                <state key="normal" title="Show Survivors"/>
+                                <connections>
+                                    <action selector="showSurvivorsButtonPressed:" destination="45d-76-6X9" eventType="touchUpInside" id="F4K-3h-st8"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4li-BS-9yY">
+                                <rect key="frame" x="0.0" y="70" width="375" height="559"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzY-4q-Rjb">
+                                        <rect key="frame" x="8" y="202" width="359" height="155.5"/>
+                                        <string key="text">Optimus Prime 
+faced 
+Predaking!! 
+
+All transformers destroyed!</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="BzY-4q-Rjb" firstAttribute="centerX" secondItem="4li-BS-9yY" secondAttribute="centerX" id="Azo-aK-9W6"/>
+                                    <constraint firstItem="BzY-4q-Rjb" firstAttribute="centerY" secondItem="4li-BS-9yY" secondAttribute="centerY" id="GbT-si-h0V"/>
+                                    <constraint firstAttribute="trailing" secondItem="BzY-4q-Rjb" secondAttribute="trailing" constant="8" id="Q9h-IV-D32"/>
+                                    <constraint firstItem="BzY-4q-Rjb" firstAttribute="leading" secondItem="4li-BS-9yY" secondAttribute="leading" constant="8" id="ZZt-Kr-GaZ"/>
+                                    <constraint firstItem="BzY-4q-Rjb" firstAttribute="centerY" secondItem="4li-BS-9yY" secondAttribute="centerY" id="tsE-LB-F9u"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CUM-Gw-SZa" firstAttribute="top" secondItem="aRw-G0-LgP" secondAttribute="bottom" id="Rup-dE-goe"/>
+                            <constraint firstItem="CUM-Gw-SZa" firstAttribute="top" secondItem="aRw-G0-LgP" secondAttribute="bottom" constant="50" id="Rup-dE-goe"/>
+                            <constraint firstItem="gD3-Pq-BUP" firstAttribute="top" secondItem="4li-BS-9yY" secondAttribute="bottom" id="SzF-jb-CeK"/>
                             <constraint firstItem="aRw-G0-LgP" firstAttribute="top" secondItem="THl-Fm-jVV" secondAttribute="bottom" id="a7m-Aq-A0h"/>
                             <constraint firstItem="THl-Fm-jVV" firstAttribute="top" secondItem="dPv-p1-OZ1" secondAttribute="bottom" id="aVU-Rj-E7c"/>
                             <constraint firstItem="aRw-G0-LgP" firstAttribute="leading" secondItem="Zb8-B9-U7v" secondAttribute="leading" id="bSw-fp-W8A"/>
                             <constraint firstItem="THl-Fm-jVV" firstAttribute="leading" secondItem="Zb8-B9-U7v" secondAttribute="leading" id="fCo-hF-CbG"/>
+                            <constraint firstAttribute="trailing" secondItem="4li-BS-9yY" secondAttribute="trailing" id="hb7-5r-4ot"/>
                             <constraint firstAttribute="trailing" secondItem="aRw-G0-LgP" secondAttribute="trailing" id="iSG-y6-CaB"/>
+                            <constraint firstItem="4li-BS-9yY" firstAttribute="leading" secondItem="Zb8-B9-U7v" secondAttribute="leading" id="nEE-xy-B3l"/>
+                            <constraint firstItem="4li-BS-9yY" firstAttribute="top" secondItem="dPv-p1-OZ1" secondAttribute="bottom" constant="50" id="r9J-89-7yv"/>
+                            <constraint firstItem="CUM-Gw-SZa" firstAttribute="top" secondItem="gD3-Pq-BUP" secondAttribute="bottom" constant="8" id="rga-H8-uVe"/>
                             <constraint firstAttribute="trailing" secondItem="THl-Fm-jVV" secondAttribute="trailing" id="uDc-h7-0iV"/>
+                            <constraint firstItem="gD3-Pq-BUP" firstAttribute="centerX" secondItem="Zb8-B9-U7v" secondAttribute="centerX" id="ybm-6X-ldx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="navigationBar" destination="THl-Fm-jVV" id="lOk-MO-gku"/>
+                        <outlet property="redView" destination="4li-BS-9yY" id="2gg-ze-N1h"/>
+                        <outlet property="survivorsButton" destination="gD3-Pq-BUP" id="l28-ON-7ro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mPK-jk-wXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
