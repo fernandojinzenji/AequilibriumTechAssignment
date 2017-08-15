@@ -87,7 +87,7 @@ The Transformation Company</string>
         <!--The Castle Company-->
         <scene sceneID="h4e-lk-mnl">
             <objects>
-                <viewController id="fOa-c2-MG7" sceneMemberID="viewController">
+                <viewController id="fOa-c2-MG7" customClass="CastleViewController" customModule="AequilibriumTechAssignments" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U8i-u9-amd"/>
                         <viewControllerLayoutGuide type="bottom" id="tfE-gT-N9N"/>
@@ -97,25 +97,34 @@ The Transformation Company</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type an array of integers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwr-aX-YWX">
-                                <rect key="frame" x="16" y="214" width="195" height="21"/>
+                                <rect key="frame" x="16" y="174" width="195" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fya-0h-gwA">
-                                <rect key="frame" x="16" y="247" width="343" height="30"/>
+                                <rect key="frame" x="16" y="207" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iE-Ea-awm">
-                                <rect key="frame" x="117" y="289" width="140" height="36"/>
+                                <rect key="frame" x="117" y="249" width="140" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Castles to Build"/>
+                                <connections>
+                                    <action selector="castlesToBuildButtonPressed:" destination="fOa-c2-MG7" eventType="touchUpInside" id="SDa-w3-vfd"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aequilibrium can build 0 castles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsE-Nv-56A">
-                                <rect key="frame" x="66" y="357" width="242" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsE-Nv-56A">
+                                <rect key="frame" x="24" y="317" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwn-Wp-D3e">
+                                <rect key="frame" x="24" y="350" width="327" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -124,16 +133,26 @@ The Transformation Company</string>
                         <constraints>
                             <constraint firstItem="fya-0h-gwA" firstAttribute="trailing" secondItem="5Sa-dh-QYC" secondAttribute="trailingMargin" id="3fQ-r2-Foq"/>
                             <constraint firstItem="fya-0h-gwA" firstAttribute="leading" secondItem="5Sa-dh-QYC" secondAttribute="leadingMargin" id="4i9-Kf-o43"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IsE-Nv-56A" secondAttribute="trailing" constant="8" id="9hd-Fz-HP8"/>
+                            <constraint firstItem="rwn-Wp-D3e" firstAttribute="leading" secondItem="5Sa-dh-QYC" secondAttribute="leadingMargin" constant="8" id="A99-AG-iwN"/>
                             <constraint firstItem="IsE-Nv-56A" firstAttribute="top" secondItem="6iE-Ea-awm" secondAttribute="bottom" constant="32" id="F8y-G3-J2c"/>
                             <constraint firstItem="6iE-Ea-awm" firstAttribute="centerX" secondItem="5Sa-dh-QYC" secondAttribute="centerX" id="Mmf-tg-trh"/>
                             <constraint firstItem="Mwr-aX-YWX" firstAttribute="leading" secondItem="5Sa-dh-QYC" secondAttribute="leadingMargin" id="MoZ-h6-ET8"/>
                             <constraint firstItem="fya-0h-gwA" firstAttribute="top" secondItem="Mwr-aX-YWX" secondAttribute="bottom" constant="12" id="Std-Sr-AVt"/>
+                            <constraint firstItem="rwn-Wp-D3e" firstAttribute="top" secondItem="IsE-Nv-56A" secondAttribute="bottom" constant="12" id="cAD-QH-ukY"/>
                             <constraint firstItem="6iE-Ea-awm" firstAttribute="top" secondItem="fya-0h-gwA" secondAttribute="bottom" constant="12" id="mUw-iN-xEq"/>
-                            <constraint firstItem="Mwr-aX-YWX" firstAttribute="top" secondItem="U8i-u9-amd" secondAttribute="bottom" constant="150" id="niA-16-ANn"/>
+                            <constraint firstItem="Mwr-aX-YWX" firstAttribute="top" secondItem="U8i-u9-amd" secondAttribute="bottom" constant="110" id="niA-16-ANn"/>
                             <constraint firstItem="IsE-Nv-56A" firstAttribute="centerX" secondItem="5Sa-dh-QYC" secondAttribute="centerX" id="tUW-lD-MFu"/>
+                            <constraint firstItem="IsE-Nv-56A" firstAttribute="leading" secondItem="5Sa-dh-QYC" secondAttribute="leadingMargin" constant="8" id="vlg-0G-cl2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rwn-Wp-D3e" secondAttribute="trailing" constant="8" id="y3t-CS-p9X"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="The Castle Company" id="pkL-Wj-Ftr"/>
+                    <connections>
+                        <outlet property="arrayTextField" destination="fya-0h-gwA" id="Kkp-CH-A8M"/>
+                        <outlet property="detailLabel" destination="rwn-Wp-D3e" id="nCc-Zd-esH"/>
+                        <outlet property="resultLabel" destination="IsE-Nv-56A" id="VEw-tF-KuH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxt-ao-RbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
