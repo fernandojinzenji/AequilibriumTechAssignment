@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransformationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TransformationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddNewViewControllerDelegate {
 
     @IBOutlet weak var abTableView: UITableView!
     @IBOutlet weak var dcTableView: UITableView!
@@ -23,6 +23,15 @@ class TransformationViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
 
     }
+    
+    // MARK: Action
+    
+    @IBAction func createNewButtonPressed(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "add-new-segue", sender: self)
+        
+    }
+    
 
     // MARK: UITableViewDataSource, UITableViewDelegate
     
@@ -114,6 +123,21 @@ class TransformationViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
+    // MARK: AddNewViewControllerDelegate
+    
+    func saveButtonPressed(transformer: Transformer) {
+        
+        if transformer.type == .Autobot {
+            self.autobotsList.append(transformer)
+            self.abTableView.reloadData()
+        }
+        else {
+            self.decepticonsList.append(transformer)
+            self.dcTableView.reloadData()
+        }
+        
+    }
+    
     // MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -123,6 +147,12 @@ class TransformationViewController: UIViewController, UITableViewDataSource, UIT
             let controller = segue.destination as! BattleViewController
             controller.selectedAutobots = self.selectedAutobots
             controller.selectedDecepticons = self.selectedDecepticons
+            
+        }
+        else if segue.identifier == "add-new-segue" {
+            
+            let controller = segue.destination as! AddNewViewController
+            controller.delegate = self
             
         }
     }
