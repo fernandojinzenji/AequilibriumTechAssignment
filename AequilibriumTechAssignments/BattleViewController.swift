@@ -28,7 +28,7 @@ class BattleViewController: UIViewController {
         
         self.selectedAutobots.removeAll()
         self.selectedDecepticons.removeAll()
-        self.selectedAutobots.append(Transformer(pName: "auto", pType: .Autobot, pStrength: 5, pIntelligence: 6, pSpeed: 5, pEndurance: 5, pRank: 5, pCourage: 5, pFirepower: 5, pSkill: 5))
+        self.selectedAutobots.append(Transformer(pName: "auto", pType: .Autobot, pStrength: 5, pIntelligence: 5, pSpeed: 5, pEndurance: 5, pRank: 5, pCourage: 5, pFirepower: 5, pSkill: 5))
         self.selectedDecepticons.append(Transformer(pName: "dece", pType: .Decepticon, pStrength: 5, pIntelligence: 5, pSpeed: 5, pEndurance: 5, pRank: 5, pCourage: 5, pFirepower: 5, pSkill: 5))
         
         
@@ -47,44 +47,51 @@ class BattleViewController: UIViewController {
                 break;
             }
             else if autobot.name == "Optimus Prime" {
-                print("optimus wins")
+                self.autobotWins += 1
                 break;
             }
             else if decepticon.name == "Predaking" {
-                print("predaking wins")
+                self.decepticonWins += 1
                 break;
             }
             
             // RULE 1: If robot is stronger (3 or more strength points) but coward (4 or less courage points), oponent wins
             if autobot.strength - decepticon.strength >= 3 && decepticon.courage - autobot.courage >= 4 {
-                print("decepticon wins")
+                self.decepticonWins += 1
                 break;
             }
             else if decepticon.strength - autobot.strength >= 3 && autobot.courage - decepticon.courage >= 4 {
-                print("autobot wins")
+                self.autobotWins += 1
                 break;
             }
             
             // RULE 2: If robot is 3 or more points of skill, it wins the fight
             if autobot.skill - decepticon.skill >= 3 {
-                print("autobot wins")
+                self.autobotWins += 1
                 break;
             }
             else if decepticon.skill - autobot.skill >= 3 {
-                print("decepticon wins")
+                self.decepticonWins += 1
                 break;
             }
             
             // RULE 3: Winner is the robot with bigger overall rating
             if autobot.overallRating > decepticon.overallRating {
-                print("autobot wins")
+                self.autobotWins += 1
             }
             else if decepticon.overallRating > autobot.overallRating {
-                print("decepticon wins")
+                self.decepticonWins += 1
             }
-            else {
-                print("Tie")
-            }
+        }
+        
+        if self.autobotWins > self.decepticonWins {
+            self.navigationBar.items?[0].title = "Autobots Win!"
+        }
+        else if self.decepticonWins > self.autobotWins {
+            self.navigationBar.items?[0].title = "Decepticon Win!"
+        }
+        else {
+            self.navigationBar.items?[0].title = "Tie!"
         }
     }
     

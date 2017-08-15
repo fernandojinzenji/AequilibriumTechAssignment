@@ -22,8 +22,6 @@ class TransformationViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        abTableView.register(UITableViewCell.self, forCellReuseIdentifier: "autobot-cell")
-        dcTableView.register(UITableViewCell.self, forCellReuseIdentifier: "decepticon-cell")
     }
 
     // MARK: UITableViewDataSource, UITableViewDelegate
@@ -46,19 +44,21 @@ class TransformationViewController: UIViewController, UITableViewDataSource, UIT
         
         if tableView == self.abTableView {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "autobot-cell")!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "aut-cell") as! TransformerTableViewCell
             
             let item = self.autobotsList[indexPath.row]
-            cell.textLabel?.text = item.name
+            cell.textLabel?.text = "\(item.name) (RANK: \(item.rank))"
+            cell.detailTextLabel?.text = "str:\(item.strength), int:\(item.intelligence), spe:\(item.speed), end:\(item.endurance), cou:\(item.courage), frp:\(item.firepower), skl:\(item.skill)"
             
             return cell
         }
         else {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "decepticon-cell")!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "dec-cell") as! TransformerTableViewCell
             
             let item = self.decepticonsList[indexPath.row]
             cell.textLabel?.text = item.name
+            cell.detailTextLabel?.text = "str:\(item.strength), int:\(item.intelligence), spe:\(item.speed), end:\(item.endurance), rnk:\(item.rank), cou:\(item.courage), frp:\(item.firepower), skl:\(item.skill)"
             
             return cell
             
