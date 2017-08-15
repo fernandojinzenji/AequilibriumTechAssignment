@@ -16,6 +16,9 @@ class TransformationViewController: UIViewController, UITableViewDataSource, UIT
     var autobotsList = Transformer.createAutobotsDataSource()
     var decepticonsList = Transformer.createDecepticonsDataSource()
     
+    var selectedAutobots = [Transformer]()
+    var selectedDecepticons = [Transformer]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,6 +62,67 @@ class TransformationViewController: UIViewController, UITableViewDataSource, UIT
             
             return cell
             
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if tableView == self.abTableView {
+            
+            self.selectedAutobots.append(self.autobotsList[indexPath.row])
+            
+        }
+        else {
+            
+            self.selectedDecepticons.append(self.decepticonsList[indexPath.row])
+
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+        if tableView == self.abTableView {
+            
+            for i in 0 ..< self.selectedAutobots.count {
+                
+                if selectedAutobots[i].name == self.autobotsList[indexPath.row].name {
+                    
+                    self.selectedAutobots.remove(at: i)
+                    break
+                    
+                }
+                
+            }
+            
+        }
+        else {
+            
+            for i in 0 ..< self.selectedDecepticons.count {
+                
+                if selectedDecepticons[i].name == self.decepticonsList[indexPath.row].name {
+                    
+                    self.selectedDecepticons.remove(at: i)
+                    break
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "battle-segue" {
+            
+            let controller = segue.destination as! BattleViewController
+            controller.selectedAutobots = self.selectedAutobots
+            controller.selectedDecepticons = self.selectedDecepticons
             
         }
     }

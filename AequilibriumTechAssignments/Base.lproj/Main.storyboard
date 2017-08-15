@@ -28,9 +28,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gf3-zY-B4Z">
                                         <rect key="frame" x="0.0" y="0.0" width="245" height="168"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal">
+                                        <state key="normal" backgroundImage="pk">
                                             <string key="title">Part 1: 
 The Castle Company</string>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="fOa-c2-MG7" kind="show" id="kza-ZT-xoY"/>
@@ -39,9 +40,10 @@ The Castle Company</string>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="93R-i3-sHw">
                                         <rect key="frame" x="0.0" y="168" width="245" height="168"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal">
+                                        <state key="normal" backgroundImage="tf">
                                             <string key="title">Part 2: 
 The Transformation Company</string>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="F0V-Kr-0BK" kind="show" id="TON-GY-qfq"/>
@@ -101,7 +103,6 @@ The Transformation Company</string>
                                                             <rect key="frame" x="0.0" y="0.0" width="327" height="29.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
-                                                        <color key="backgroundColor" red="0.30980392159999998" green="1" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </tableViewCell>
                                                 </prototypes>
                                                 <connections>
@@ -140,7 +141,6 @@ The Transformation Company</string>
                                                             <rect key="frame" x="0.0" y="0.0" width="327" height="29.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
-                                                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </tableViewCell>
                                                 </prototypes>
                                                 <connections>
@@ -171,7 +171,11 @@ The Transformation Company</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="The Transformation Co." id="je2-pP-ion">
-                        <barButtonItem key="rightBarButtonItem" title="Battle!" id="Ary-za-h7U"/>
+                        <barButtonItem key="rightBarButtonItem" title="Battle!" id="Ary-za-h7U">
+                            <connections>
+                                <segue destination="45d-76-6X9" kind="presentation" identifier="battle-segue" modalTransitionStyle="crossDissolve" id="VYN-ee-nBX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="abTableView" destination="Log-5f-uzR" id="ObK-vi-HDO"/>
@@ -181,6 +185,42 @@ The Transformation Company</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCj-qk-Nuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1983.2" y="478.11094452773619"/>
+        </scene>
+        <!--Battle View Controller-->
+        <scene sceneID="ABn-wD-9Q6">
+            <objects>
+                <viewController id="45d-76-6X9" customClass="BattleViewController" customModule="AequilibriumTechAssignments" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dPv-p1-OZ1"/>
+                        <viewControllerLayoutGuide type="bottom" id="CUM-Gw-SZa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zb8-B9-U7v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THl-Fm-jVV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="V7n-J4-CNP">
+                                        <barButtonItem key="rightBarButtonItem" title="Close" id="4MJ-gS-n85">
+                                            <connections>
+                                                <action selector="closeButtonPressed:" destination="45d-76-6X9" id="0Bf-SQ-ZZp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="THl-Fm-jVV" id="lOk-MO-gku"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPK-jk-wXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2983" y="480"/>
         </scene>
         <!--The Castle Co.-->
         <scene sceneID="h4e-lk-mnl">
@@ -275,4 +315,8 @@ The Transformation Company</string>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pk" width="1200" height="900"/>
+        <image name="tf" width="1700" height="956"/>
+    </resources>
 </document>
