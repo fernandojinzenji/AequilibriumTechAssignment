@@ -1,4 +1,4 @@
-# AequilibriumTechAssignment
+# TechAssignment
 
 Aequilibrium | Technical Assignment
 
