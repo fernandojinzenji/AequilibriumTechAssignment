@@ -1,8 +1,6 @@
 # TechAssignment
 
-Aequilibrium | Technical Assignment
-
-Part 1: Aequilibrium | The Castle Company
+Part 1: The Castle Company
 
 Aequilibrium is in the business of building castles (we really aren’t, but let’s pretend). Now, we also
 believe in quality aesthetics, so we only want to build castles in two types of places:
@@ -28,7 +26,7 @@ ints. For example, in the sequence [2,6,6,6,3] the sequence of 3 6s is a peak.
 ● A valley is an integer or series of integers that is below the immediately preceding and
 following ints. For example, in the sequence [6,1,4] the "1" would be a valley.
 
-Part 2: Aequilibrium | The Transformation Company
+Part 2: The Transformation Company
 
 Aequilibrium does love transforming… people, lives, teams, companies. And there’s no better
 representation of transformation than Hasbro’s Transformers , the classic television series featuring
