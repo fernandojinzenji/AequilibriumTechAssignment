@@ -2,7 +2,7 @@
 
 Part 1: The Castle Company
 
-Aequilibrium is in the business of building castles (we really aren’t, but let’s pretend). Now, we also
+Castle Company is in the business of building castles (we really aren’t, but let’s pretend). Now, we also
 believe in quality aesthetics, so we only want to build castles in two types of places:
 
 a. Peaks
@@ -11,7 +11,7 @@ b. Valleys
 
 Let’s say you have an array of integers that describes a stretch of land, where each integer represents the
 current height of the land. Can you write a function that reads that array and returns the number of
-castles that Aequilibrium should build on that stretch of land? You can write this solution in whatever
+castles that Castle Company should build on that stretch of land? You can write this solution in whatever
 language you like.
 
 You can make the following assumptions:
@@ -28,7 +28,7 @@ following ints. For example, in the sequence [6,1,4] the "1" would be a valley.
 
 Part 2: The Transformation Company
 
-Aequilibrium does love transforming… people, lives, teams, companies. And there’s no better
+The Transformation Company does love transforming… people, lives, teams, companies. And there’s no better
 representation of transformation than Hasbro’s Transformers , the classic television series featuring
 heroic Autobots raging their battle to destroy the evil forces of the Deceptions.
 Please watch this video:
